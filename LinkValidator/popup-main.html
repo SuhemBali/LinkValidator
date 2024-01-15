@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung</title>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="./styles-main.css">
+</head>
+
+
+<body>
+    <!-- NAVBAR WITH LOGO -->
+    <nav class="logo_banner">
+        <h1 class="logo">LinkValidator | Samsung</h1>
+    </nav>
+
+    <!-- SELECTOR SECTION -->
+    <div class="selector_section">
+        <div class="country_selector">
+            <div class="section_title pb-5">
+                <h4 class="title">Choose country</h4>
+                <p class="desc">Select a country you wish to check links for</p>
+            </div>
+            <div class="selector">
+                <!-- LABEL TAB -->
+                <label>
+                    <input type="radio" name="market" class="radio_custom" value="JORDAN">
+                    <span class="radio-label">Jordan</span>
+                </label>
+
+                <!-- LABEL TAB -->
+                <label>
+                    <input type="radio" name="market" class="radio_custom" value="IRAQ">
+                    <span class="radio-label">Iraq</span>
+                </label>
+
+                <!-- LABEL TAB -->
+                <label>
+                    <input type="radio" name="market" class="radio_custom" value="LEBANON">
+                    <span class="radio-label">Lebanon</span>
+                </label>
+
+                <!-- LABEL TAB -->
+                <label>
+                    <input type="radio" name="market" class="radio_custom" value="SEEG">
+                    <span class="radio-label">Egypt</span>
+                </label>
+
+                <!-- LABEL TAB -->
+                <label>
+                    <input type="radio" name="market" class="radio_custom" value="SEIL">
+                    <span class="radio-label">Israel</span>
+                </label>
+
+                <!-- LABEL TAB -->
+                <label>
+                    <input type="radio" name="market" class="radio_custom" value="SEMAG">
+                    <span class="radio-label">Morocco</span>
+                </label>
+
+                <!-- LABEL TAB -->
+                <label>
+                    <input type="radio" name="market" class="radio_custom" value="SEPAK">
+                    <span class="radio-label">Pakistan</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="tooltip_selector">
+            <div class="section_title pb-10">
+                <h4 class="title">Tooltip on/off</h4>
+                <p class="desc">Toggle to view attributes on hover</p>
+            </div>
+
+            <div class="toggler">
+                <input type="checkbox" id="enableInspect">
+            </div>
+        </div>
+
+        <div class="cta">
+            <button id="checkLinks">Shoot!</button>
+        </div>
+
+    </div>
+
+    <!-- RESULTS SECTION -->
+    <div class="result_section">
+        <div id="results"></div>
+        <div id="linkTooltip"></div>
+    </div>
+</body>
+
+</html>

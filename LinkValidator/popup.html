@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Samsung EDM Links Checker</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="popup.js"></script>
+  <style>
+
+  </style>
+</head>
+
+<body style="min-width: 500px;" class="samsung-edm-links-checker">
+  <div class="nav">
+    <h1>Samsung</h1>
+  </div>
+  <div id="markets">
+    <div>
+      <h3 class="title">Choose Country</h3>
+    </div>
+    <div>
+      <label>
+        <input type="radio" name="market" value="SESAR">
+        <img src="/country_icons/saudi.png" alt="KSA Flag" class="flag-icon">
+        <span class="radio-label">SESAR (KSA)</span>
+      </label>
+      <label>
+        <input type="radio" name="market" value="SEPAK">
+        <img src="/country_icons/pakistan.png" alt="KSA Flag" class="flag-icon">
+        <span class="radio-label">SEPAK (Pakistan)</span>
+      </label>
+      <label>
+        <input type="radio" name="market" value="SEIL">
+        <img src="/country_icons/israel.png" alt="SEIL Flag" class="flag-icon">
+        <span class="radio-label">SEIL (Israel)</span>
+      </label>
+      <label>
+        <input type="radio" name="market" value="SEEG">
+        <img src="/country_icons/egypt.png" alt="SEEG Flag" class="flag-icon">
+        <span class="radio-label">SEEG (Egypt)</span>
+      </label>
+      <label>
+        <input type="radio" name="market" value="SEMAG">
+        <img src="/country_icons/morocco.png" alt="KSA Flag" class="flag-icon">
+        <span class="radio-label">SEMAG (Morocco)</span>
+      </label>
+      <label>
+        <input type="radio" name="market" value="JORDAN">
+        <img src="/country_icons/jordan.png" alt="JORDAN Flag" class="flag-icon">
+        <span class="radio-label">JORDAN</span>
+      </label>
+      <label>
+        <input type="radio" name="market" value="LEBANON">
+        <img src="/country_icons/lebanon.png" alt="LEBANON Flag" class="flag-icon">
+        <span class="radio-label">LEBANON</span>
+      </label>
+      <label>
+        <input type="radio" name="market" value="JORDAN">
+        <img src="/country_icons/iraq.png" alt="IRAQ Flag" class="flag-icon">
+        <span class="radio-label">IRAQ</span>
+      </label>
+      <label>
+        <input type="radio" name="market" value="TURKEY">
+        <img src="/country_icons/turkey.png" alt="TURKEY Flag" class="flag-icon">
+        <span class="radio-label">TURKEY</span>
+      </label>
+    </div>
+  </div>
+  <div class="container">
+    <h3>Link Attribute Tooltip</h3>
+    <p>Hover over any link to see its attributes:</p>
+    <label class="switch">
+      <input type="checkbox" id="enableInspect">
+      <span class="slider round"></span>
+    </label>
+  </div>
+  <button id="checkLinks">Check Links</button>
+
+  <h3>Scan Results</h3>
+  <div id="results"></div>
+  <div id="linkTooltip"
+    style="display: none; position: absolute; background-color: #f9f9f9; border: 1px solid #ccc; padding: 5px;"></div>
+  <div id="credits">
+    <p>Credits to <a href="https://github.com/danishfareed/">Danish</a></p>
+  </div>
+</body>
+
+</html>
