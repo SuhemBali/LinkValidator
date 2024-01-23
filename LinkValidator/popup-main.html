@@ -10,85 +10,104 @@
 </head>
 
 
-<body>
+<body id="samsung_edm_links_checker">
     <!-- NAVBAR WITH LOGO -->
     <nav class="logo_banner">
         <h1 class="logo">LinkValidator | Samsung</h1>
     </nav>
 
-    <!-- SELECTOR SECTION -->
-    <div class="selector_section">
-        <div class="country_selector">
-            <div class="section_title pb-5">
-                <h4 class="title">Choose country</h4>
-                <p class="desc">Select a country you wish to check links for</p>
+    <div class="container">
+        <!-- SELECTOR SECTION -->
+        <div class="selector_section">
+            <div class="country_selector">
+                <div class="section_title pb-5">
+                    <h4 class="title">Choose country</h4>
+                    <p class="desc">Select a country you wish to check links for</p>
+                </div>
+                <div class="selector">
+                    <!-- LABEL TAB -->
+                    <label>
+                        <input type="radio" name="market" class="radio_custom" value="JORDAN">
+                        <span class="radio-label">Jordan</span>
+                    </label>
+
+                    <!-- LABEL TAB -->
+                    <label>
+                        <input type="radio" name="market" class="radio_custom" value="IRAQ">
+                        <span class="radio-label">Iraq</span>
+                    </label>
+
+                    <!-- LABEL TAB -->
+                    <label>
+                        <input type="radio" name="market" class="radio_custom" value="LEBANON">
+                        <span class="radio-label">Lebanon</span>
+                    </label>
+
+                    <!-- LABEL TAB -->
+                    <label>
+                        <input type="radio" name="market" class="radio_custom" value="SEEG">
+                        <span class="radio-label">Egypt</span>
+                    </label>
+
+                    <!-- LABEL TAB -->
+                    <label>
+                        <input type="radio" name="market" class="radio_custom" value="SEIL">
+                        <span class="radio-label">Israel</span>
+                    </label>
+
+                    <!-- LABEL TAB -->
+                    <label>
+                        <input type="radio" name="market" class="radio_custom" value="SEMAG">
+                        <span class="radio-label">Morocco</span>
+                    </label>
+
+                    <!-- LABEL TAB -->
+                    <label>
+                        <input type="radio" name="market" class="radio_custom" value="SEPAK">
+                        <span class="radio-label">Pakistan</span>
+                    </label>
+
+                    <!-- LABEL TAB -->
+                    <label>
+                        <input type="radio" name="market" class="radio_custom" value="SEPAK">
+                        <span class="radio-label">Tunesia</span>
+                    </label>
+                </div>
             </div>
-            <div class="selector">
-                <!-- LABEL TAB -->
-                <label>
-                    <input type="radio" name="market" class="radio_custom" value="JORDAN">
-                    <span class="radio-label">Jordan</span>
-                </label>
 
-                <!-- LABEL TAB -->
-                <label>
-                    <input type="radio" name="market" class="radio_custom" value="IRAQ">
-                    <span class="radio-label">Iraq</span>
-                </label>
+            <div class="tooltip_selector">
+                <div class="section_title pb-10">
+                    <h4 class="title">Tooltip on/off</h4>
+                    <p class="desc">Toggle to view attributes on hover</p>
+                </div>
 
-                <!-- LABEL TAB -->
-                <label>
-                    <input type="radio" name="market" class="radio_custom" value="LEBANON">
-                    <span class="radio-label">Lebanon</span>
-                </label>
-
-                <!-- LABEL TAB -->
-                <label>
-                    <input type="radio" name="market" class="radio_custom" value="SEEG">
-                    <span class="radio-label">Egypt</span>
-                </label>
-
-                <!-- LABEL TAB -->
-                <label>
-                    <input type="radio" name="market" class="radio_custom" value="SEIL">
-                    <span class="radio-label">Israel</span>
-                </label>
-
-                <!-- LABEL TAB -->
-                <label>
-                    <input type="radio" name="market" class="radio_custom" value="SEMAG">
-                    <span class="radio-label">Morocco</span>
-                </label>
-
-                <!-- LABEL TAB -->
-                <label>
-                    <input type="radio" name="market" class="radio_custom" value="SEPAK">
-                    <span class="radio-label">Pakistan</span>
-                </label>
+                <div class="toggler">
+                    <input type="checkbox" id="enableInspect">
+                </div>
             </div>
+
+            <div class="cta">
+                <button id="checkLinks">Validate</button>
+            </div>
+
         </div>
 
-        <div class="tooltip_selector">
-            <div class="section_title pb-10">
-                <h4 class="title">Tooltip on/off</h4>
-                <p class="desc">Toggle to view attributes on hover</p>
+        <!-- RESULTS SECTION -->
+        <div class="result_section">
+            <div id="results">
+                <h5 class="terminal_text">Terminal Ready:-$ <span>&nbsp;</span></h5>
             </div>
-
-            <div class="toggler">
-                <input type="checkbox" id="enableInspect">
-            </div>
+            <div id="linkTooltip"></div>
         </div>
 
-        <div class="cta">
-            <button id="checkLinks">Shoot!</button>
+        <div class="credits_section">
+            <div class="credit_1"><a href="https://github.com/danishfareed/" target="_blank">
+                    <p>🧠 by Danish</p>
+                </a></div>
+            <div class="credit_2"><a href="https://github.com/SuhemBali/" target="_blank">
+                    <p>✨ by Suhem</p>
+                </a></div>
         </div>
-
-    </div>
-
-    <!-- RESULTS SECTION -->
-    <div class="result_section">
-        <div id="results"></div>
-        <div id="linkTooltip"></div>
     </div>
 </body>
 

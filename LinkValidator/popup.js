@@ -35,7 +35,15 @@ function checkEverestTag() {
       var extractedEverestTags = extractEverestTags(htmlContent);
       // Example: Display the extracted links
       console.log({ extractedEverestTags });
-      document.getElementById("results").innerHTML = '<h4 class="result_title">Everest Tag:</h4>' + extractedEverestTags.join('\n');
+      var resultContainer = document.getElementById("results");
+
+      if (extractedEverestTags.length === 0) {
+        // If the array is empty, display "none"
+        resultContainer.innerHTML = '<span class="purple">Everest Tags Found:</span><br>None!<br>';
+      } else {
+        // If the array is not empty, display the joined tags
+        resultContainer.innerHTML = '<span class="purple">Everest Tags Found:</span><p>' + extractedEverestTags.join('\n\n') + '</p>';
+      }
     });
   });
 }
@@ -60,18 +68,22 @@ function displayResults(nonRelevantLinks, addressContent) {
   var resultsDiv = document.getElementById('results');
 
   var address = addressContent
-    ? '<br><br><div class="address-container"><h4>Address in EDM:</h4><p>' + addressContent + '</p></div><br><br>'
-    : '<div class="address-container"><h4>Address not available</h4></div>';
-  console.log(nonRelevantLinks)
+    ? '<br><div><h4 class="purple">Footer Address:</h4><p>' + addressContent + '</p></div>'
+    : '<br><div><h4>Footer Address</h4></div>';
+
   if (nonRelevantLinks.length > 0) {
-    var linksHTML = '<br><br><h4 class="result_title" style="font-weight: bold;">Non Relevant Links:</h4>';
+    var linksHTML = '<br><span class="purple">Incorrect Links:</span>';
     linksHTML += nonRelevantLinks
       .map(function (link, index) {
         var linkURL = link.replace(/(https?:\/\/)?(www\.)/, '$1');
+
         return (
           '<div class="result_link"><span class="link_number">' +
-          (index + 1) +
-          '.</span> <a class="link typing_animation" href="' + linkURL + '">' + linkURL + '</a></div>'
+          (index + 1) + '.</span> <a class="link typing-animation" href="' +
+          linkURL +
+          '">' +
+          linkURL +
+          '</a></div>'
         );
       })
       .join('');
@@ -106,6 +118,7 @@ function extractLinks(htmlContent) {
 
   return extractedLinks;
 }
+
 
 // Function to handle tab update
 function handleTabUpdate(tabId, changeInfo, tab) {
