@@ -165,7 +165,7 @@ function showAttributesTooltip(event) {
   if (!enableInspect) return;
 
   const target = event.target;
-  const allowedAttributes = ['data-sap-hpa-ceimo-ioi-link', 'href', 'data-sap-hpa-ceimo-link-alias', '_label'];
+  const allowedAttributes = ['data-sap-hpa-ceimo-ioi-link', 'href', 'data-sap-hpa-ceimo-link-alias', '_label', 'alt'];
 
   // Include <img> tags
   const isAllowedElement = target.tagName.toLowerCase() === 'a' || target.tagName.toLowerCase() === 'img';
@@ -209,6 +209,9 @@ function showAttributesTooltip(event) {
       case '_label':
         labelText = 'Label';
         break;
+        case 'alt':
+          labelText = 'Alt text';
+          break;
       // Add more cases as needed
       default:
         labelText = attribute.name;
